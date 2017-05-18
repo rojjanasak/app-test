@@ -1,0 +1,49 @@
+<ion-view view-title="ข้อมูลทั่วไป">
+    <ion-content>
+        <div class="padding">รหัสแปลง : 
+        <h3>{{parcel.alrcode}}</h3>
+        </div>      
+        <ul class="list">
+            <li class="item item-input item-stacked-label">
+                <span class="input-label">ตำแแหน่งแปลง ส.ป.ก.</span>
+                <p ng-bind="'lat: '+(mapData.lat | number:5)+ '  long: ' +(mapData.lng | number:5)">
+                <p ng-bind="(parcel.tam_nam_t)+' '+(parcel.amp_nam_t)+' '+(parcel.prov_nam_t)">
+            </li>
+            <li class="item item-input item-stacked-label">
+                <span class="input-label">ชื่อเจ้าของแปลง</span><p>
+                {{alrMobileAns.farmer_f}} {{alrMobileAns.farmer_f}}
+            </li>
+            <li class="item item-input item-stacked-label">
+                <span class="input-label">จำนวนที่ดิน ส.ป.ก. ที่ถือครองทั้งหมด (ไร่)</span><p>
+                {{parcel.alr_all_r}} ไร่ {{parcel.alr_all_n}} งาน {{parcel.alr_all_w}} วา
+            </li>
+            <li class="item item-input item-stacked-label">
+                <span class="input-label">การทำการเกษตรในปัจจุบัน</span><p>
+                {{parcel.c1_name}} {{parcel.c2_name}} {{parcel.c3_name}} {{parcel.f1_name}} {{parcel.l2_name}} 
+            </li>
+            <!-- <li class="item item-input item-stacked-label"><span class="input-label">รูปภาพ</span><p>
+            <img ng-src="img/marker.png"></li> -->
+            <li class="item item-input item-stacked-label"><span class="input-label">ความสูงจากระดับน้ำทะเล <p>{{parcel.ele}} เมตร</span></li>
+            <li class="item item-input item-stacked-label"><span class="input-label">ความลาดชัน <p>{{parcel.slp}} %</span></li>
+            <li class="item item-input item-stacked-label"><span class="input-label">ห่างจากหมู่บ้าน {{parcel.vill_nam_t}} <p>{{parcel.vill_km}} กม.</span></li>
+            <li class="item item-input item-stacked-label"><span class="input-label">ห่างจาก {{parcel.hcr_name}} <p>{{parcel.hcr_km}} กม.</span></li>
+            <li class="item item-input item-stacked-label"><span class="input-label">ห่างจากสถานีรถไฟ {{parcel.tst_name}} <p>{{parcel.tst_km}} กม.</span></li>
+            <li class="item item-input item-stacked-label"><span class="input-label">ห่างจาก {{parcel.mun_name}} <p>{{parcel.mun_km}} กม.</span></li>
+            <li class="item item-input item-stacked-label"><span class="input-label">ห่างจาก {{parcel.roa_type}} <p>{{parcel.roa_km}} กม.</span></li>
+            <li class="item item-input item-stacked-label"><span class="input-label">ห่างจากแคลอง/แม่น้ำ {{parcel.str_name}} <p>{{parcel.str_km}} กม.</span></li>
+            <li class="item item-input item-stacked-label"><span class="input-label">ห่างจากแหล่งน้ำ {{parcel.wbm_name}} <p>{{parcel.wbm_km}} กม.</span></li>
+            <li class="item item-input item-stacked-label"><span class="input-label">ห่างจาก {{parcel.irr_name}} <p>{{parcel.irr_km}} กม.</span></li>
+            <li class="item item-input item-stacked-label"><span class="input-label">การใช้ประโยชน์ที่ดินในปี 2548 : <p>{{parcel.lu48_t}}</span></li>
+            <li class="item item-input item-stacked-label"><span class="input-label">การใช้ประโยชน์ที่ดินในปี 2557 : <p>{{parcel.lu57_t}}</span></li>
+            <li class="item item-input item-stacked-label"><span class="input-label">ความเหมาะสมปลูกข้าว : <p>{{parcel.r_suit}}</span></li></li>
+            <li class="item item-input item-stacked-label"><span class="input-label">ความเหมาะสมปลูกข้าวโพด : <p>{{parcel.m_suit}}</span></li>
+            <li class="item item-input item-stacked-label"><span class="input-label">ความเหมาะสมปลูกมันสำปะหลัง : <p>{{parcel.c_suit}}</span></li>
+            <li class="item item-input item-stacked-label"><span class="input-label">ความเหมาะสมปลูกอ้อย : <p>{{parcel.s_suit}}</span></li>
+            <li class="item item-input item-stacked-label"><span class="input-label">ความเหมาะสมปลูกผัก : <p>{{parcel.v_suit}}</span></li>
+            <li class="item item-input item-stacked-label"><span class="input-label">ความเหมาะสมปลูกผลไม้ : <p>{{parcel.f_suit}}</span></li>
+            <li class="item item-input item-stacked-label"><span class="input-label">ความเหมาะสมปลูกทุ่งหญ้าเลี้ยงสัตว์ : <p>{{parcel.p_suit}}</span></li>
+            <li class="item item-input item-stacked-label"><span class="input-label">ระดับเสี่ยงแล้ง : <p>{{parcel.dru}}</span></li>
+            <li class="item item-input item-stacked-label"><span class="input-label">ระดับเสี่ยงน้ำท่วม : <p>{{parcel.flo}}</span></li>
+        </ul>
+    </ion-content>
+</ion-view>
